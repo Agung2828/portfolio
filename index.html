@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agung Kurniawan - Portfolio</title>
+    <link rel="icon" type="images/favicon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <img src="images/gif1.gif " class="logo" alt="Logo" />
+        <ul id="sidemenu">
+          <li><a href="#header">Rumah</a></li>
+          <li><a href="#about">Kenalan yok</a></li>
+          <li><a href="#services">layanan saya</a></li>
+          <li><a href="#portfolio">Ma Job</a></li>
+          <li><a href="#contact">Halo dek</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+      <div class="header-text">
+        <p>Welcome to My universe</p>
+        <h1>Hi, I'm <span>Agung</span><br /></h1>
+        <i class="fa-solid fa-heart" style="color: red;"></i>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/wis.jpg" alt="About Image" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">Kenalin slurr</h1>
+            <p>
+              Haloo sebutan saya agung, saya lahir dari benih yang keluar dari pabrik pembuatannya menjadi organisme hidup yang sukses dan bergizi lalu cita cita saya adalah bapak sayang anak&istri selain itu kesibukan saya menjadi makhluk hidup yaitu ding ding koding waktu saya banyak dihabis kan mencari bug dari pada mencari jodoh, kopi adalah bahan bakar saya dan kode adalah bahasa cinta saya jika mau cinta saya kode kode laa saya kiw! Salam kenal dan semoga kita bisa tertawa bersama saat mendapati dunia ini penuh dengan bug, baik di dalam maupun di luar kode!
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>HTML</span><br />Yok bole diadu😂</li>
+                <li><span>CSS</span><br />ez lurrrr😎</li>
+                <li><span>JavaScript</span><br />Lumayan laa luurrr😁</li>
+                <li><span>php</span><br />bolee laa😀</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Web Developer (fullstack)</span><br />Bank Riau Kepri Syariah
+                </li>
+                <li>
+                  <span>Frontend Developer</span><br />Smp4 official, rangga's band
+                </li>
+                <li>
+                  <span>Organisasi</span>
+                  <ul>
+                      <li>Pimpinan Ranting Muhammadiyah</li>
+                      <li>Pimpinan Daerah Muhammadiyah</li>
+                      <li>Duta Anak Kota Padang Panjang</li>
+                      <li>ITSA</li>
+                  </ul>
+              </li>
+              
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>SMA/MA</span><br />Pontrenmu KMM 
+                </li>
+                <li><span>Universitas</span><br />Politeknik Caltex Riau</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Development</h2>
+            <p>Saya membangun situs web yang bahkan ibumu akan bangga, dan dijamin membuat browser tidak menangis.</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-paint-brush"></i>
+            <h2>Graphic Design</h2>
+            <p>Saya menciptakan desain yang begitu keren hingga membuat Photoshop iri dan pensil warna menyerah.</p>
+          </div>
+          <div>
+            <i class="fa-brands fa-unity"></i>
+            <h2>3D Modelling</h2>
+            <p>Saya membuat model 3D yang begitu nyata, kamu akan berpikir itu bisa melompat keluar dari layar dan menyapamu.</p>
+          </div>
+        </div>
+      </div>
+    </section>    
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/coding.jpg" alt="Work Image" />
+            <div class="layer">
+              <h3>Git Hub</h3>
+              <a href="https://github.com/Agung2828?tab=repositories"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/desain.jpg" alt="Work Image" />
+            <div class="layer">
+              <h3>Desain</h3>
+              <a href="https://id.pinterest.com/aagungk28/"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/3d.jpg" alt="Work Image" />
+            <div class="layer">
+              <h3>3d Modelling</h3>
+              <a href="https://id.pinterest.com/aagungk28/"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="header">
+      <h1>Galeri Guee</h1>
+      <p>Terpantau Tampan</p>
+    </div>
+    
+    <!-- Photo Grid -->
+    <div class="row"> 
+      <div class="column">
+        <img src="images/p2.jpg" style="width:100%">
+        <img src="images/p3.jpg" style="width:100%">
+        <img src="images/p4.jpg" style="width:100%">
+        <img src="images/p18.jpg" style="width:100%">
+        <img src="images/p6.jpg" style="width:100%">
+        <img src="images/p12.jpg" style="width:100%">
+        <img src="images/p13.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="images/p9.jpg" style="width:100%">
+        <img src="images/p10.jpg" style="width:100%">
+        <img src="images/p29.jpg" style="width:100%">
+        <img src="images/p12.jpg" style="width:100%">
+        <img src="images/p8.jpg" style="width:100%">
+        <img src="images/p14.jpg" style="width:100%">
+        <img src="images/p7.jpg" style="width:100%">
+      </div>  
+      <div class="column">
+        <img src="images/p15.jpg" style="width:100%">
+        <img src="images/p16.jpg" style="width:100%">
+        <img src="images/p17.jpg" style="width:100%">
+        <img src="images/p4.jpg" style="width:100%">
+        <img src="images/p19.jpg" style="width:100%">
+        <img src="images/p28.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="images/p22.jpg" style="width:100%">
+        <img src="images/p23.jpg" style="width:100%">
+        <img src="images/p24.jpg" style="width:100%">
+        <img src="images/p25.jpg" style="width:100%">
+        <img src="images/p26.jpg" style="width:100%">
+        <img src="images/p27.jpg" style="width:100%">
+      </div>
+    </div>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> aagungk28@gmail.com</p>
+          <p><i class="fa-solid fa-square-phone"></i>+6282289880903</p>
+          <div class="social-icons">
+            <a href="https://www.tiktok.com/@jago0ng?_t=8mbA7jG6cAK&_r=1" class="tiktok-icon">
+              <i class="fab fa-tiktok"></i>
+            </a>            
+            <a href="https://id.pinterest.com/aagungk28/"><i class="fa-brands fa-pinterest-square"></i></a>
+            <a href="https://www.instagram.com/aagongk/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="linktr.ee/aagongk28"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+          <a href="images/CV_Agung_kurniawan.pdf" download class="btn btn2"
+            >Download CV</a
+          >
+        </div>
+        <section id="contact">
+          <div class="container">
+            <div class="contact-right">
+              <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required />
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+              </form>
+              <span id="submit-result"></span>
+            </div>
+          </div>
+        </section>        
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Agung Kurniawan. Semua hak dilindungi, termasuk hak untuk mengklaim bahwa situs ini membuat hari Anda lebih baik. Terima kasih telah mengunjungi, semoga mouse Anda selalu berada di jalur yang benar dan koneksi internet Anda selalu stabil!</p>
+      </div>    
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('form[name="submit-to-google-sheet"]').submit(function(e) {
+    e.preventDefault();
+    var $form = $(this);
+    var url = 'https://script.google.com/macros/s/AKfycbxXTIXPvE_Hqejz221aRQPI1aZwpNYx6caWLHHpWrUL51p0StaxAHNIPBnx8dsn7c5D/exec';
+    $.ajax({
+      url: url,
+      method: 'GET',
+      dataType: 'json',
+      data: $form.serialize(),
+      success: function(response) {
+        $('#submit-result').html('Form submitted successfully!');
+        $form.trigger('reset');
+      },
+      error: function() {
+        $('#submit-result').html('Error submitting form. Please try again.');
+      }
+    });
+  });
+});
+
+      // Menampilkan pesan saat mouse di atas footer
+document.querySelector('footer').addEventListener('mouseover', function() {
+  alert('Terima kasih telah mengunjungi! Semoga hari Anda menyenangkan!');
+});
+
+// Menampilkan pesan saat mouse meninggalkan footer
+document.querySelector('footer').addEventListener('mouseleave', function() {
+  alert('Jangan lupa kembali lagi!');
+});
+
+      function opentab(tabname) {
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        for (var i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active-link");
+        }
+
+        for (var i = 0; i < tabcontents.length; i++) {
+          tabcontents[i].classList.remove("active-tab");
+        }
+
+        document.getElementById(tabname).classList.add("active-tab");
+        event.currentTarget.classList.add("active-link");
+      }
+    </script>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("sidemenu");
+        const icon = document.querySelector(".menu-icon");
+        menu.classList.toggle("show");
+        icon.classList.toggle("open");
+      }
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxXTIXPvE_Hqejz221aRQPI1aZwpNYx6caWLHHpWrUL51p0StaxAHNIPBnx8dsn7c5D/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          fetch(scriptURL, { method: "POST", body: new FormData(form) }).then(
+            (response) => console.log("Success!", response)
+          );
+          msg.innerHTML = "Message sent successfully";
+          setTimeout(function () {
+            msg.innerHTML = "";
+          }, 5000);
+          form.reset();
+        })
+        .catch((error) => console.error("Error!", error.message));
+    </script>
+  </body>
+</html>
