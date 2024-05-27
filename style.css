@@ -548,3 +548,72 @@ footer p {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+/*pesan*/
+body.loading {
+  overflow: hidden; /* Mengunci scroll */
+}
+
+.container.blur {
+  filter: blur(5px); /* Atur kekuatan blur sesuai kebutuhan */
+}
+
+.message {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.message.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-20px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+}
+
+.message.show {
+  animation: bounce 1s;
+}
+
+.loading {
+  display: none; /* Awalnya tersembunyi */
+  position: fixed; /* Atur posisi sesuai kebutuhan */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Pastikan di atas elemen lainnya */
+}
+
+.loading.show {
+  display: block; /* Tampilkan saat kelas show ditambahkan */
+}
+
+.loading img {
+  width: 100px; /* Atur lebar sesuai kebutuhan */
+  height: 100px; /* Atur tinggi sesuai kebutuhan */
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animated-text {
+  animation: fadeInLeft 2s ease-in-out;
+}
+
