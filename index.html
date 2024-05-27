@@ -285,12 +285,30 @@ document.querySelector('footer').addEventListener('mouseleave', function() {
     </script>
 
     <script>
-      function toggleMenu() {
-        const menu = document.getElementById("sidemenu");
-        const icon = document.querySelector(".menu-icon");
-        menu.classList.toggle("show");
-        icon.classList.toggle("open");
-      }
+       function toggleMenu() {
+  const menu = document.getElementById("sidemenu");
+  const icon = document.querySelector(".menu-icon");
+  menu.classList.toggle("show");
+  icon.classList.toggle("open");
+}
+
+document.addEventListener('click', function(event) {
+            const header = document.getElementById('header');
+            const menu = document.getElementById('sidemenu');
+            const icon = document.querySelector('.menu-icon');
+
+            if (!header.contains(event.target)) {
+                if (menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                    icon.classList.remove('open');
+                }
+            }
+        });
+
+// Cegah event listener pada dokumen dari menangkap klik di dalam header
+header.addEventListener('click', function(event) {
+  event.stopPropagation();
+});
     </script>
 
     <script>
