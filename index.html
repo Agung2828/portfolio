@@ -12,29 +12,33 @@
     />
   </head>
   <body>
-    <header id="header">
-      <nav>
-        <img src="images/gif1.gif " class="logo" alt="Logo" />
-        <ul id="sidemenu">
-          <li><a href="#header">Rumah</a></li>
-          <li><a href="#about">Kenalan yok</a></li>
-          <li><a href="#services">layanan saya</a></li>
-          <li><a href="#portfolio">Ma Job</a></li>
-          <li><a href="#contact">Halo dek</a></li>
-        </ul>
-        <div class="menu-icon" onclick="toggleMenu()">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </nav>
-      <div class="header-text">
-        <p>Welcome to My universe</p>
-        <h1>Hi, I'm <span>Agung</span><br /></h1>
-        <i class="fa-solid fa-heart" style="color: red;"></i>
+    <audio autoplay loop>
+      <source src="images/TECHNO ◉ Raffaella Carrà - Pedro (Jaxomy & Agatino Romero Remix) TikTok Song.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+  <header id="header">
+    <nav>
+      <img src="images/gif1.gif" class="logo" alt="Logo" />
+      <ul id="sidemenu">
+        <li><a href="#header">Rumah</a></li>
+        <li><a href="#about">Kenalan yok</a></li>
+        <li><a href="#services">layanan saya</a></li>
+        <li><a href="#portfolio">Ma Job</a></li>
+        <li><a href="#contact">Halo dek</a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-    </header>
-
+    </nav>
+    <div class="header-text animated-text">
+      <p>Welcome to My universe</p>
+      <h1>Hi, I'm <span>Agung</span><br /></h1>
+      <i class="fa-solid fa-heart" style="color: red;"></i>
+    </div>
+  </header>
+  
     <!-- About Section -->
     <section id="about">
       <div class="container">
@@ -212,23 +216,24 @@
               ><i class="fa-brands fa-linkedin"></i
             ></a>
           </div>
-          <a href="images/CV_Agung_kurniawan.pdf" download class="btn btn2"
+          <a href="images/CV_Agung kurniawan 2.pdf" download class="btn btn2"
             >Download CV</a
           >
-        </div>
-        <section id="contact">
-          <div class="container">
-            <div class="contact-right">
-              <form name="submit-to-google-sheet">
-                <input type="text" name="Name" placeholder="Your Name" required />
-                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                <button type="submit" class="btn btn2">Submit</button>
-              </form>
-              <span id="submit-result"></span>
+          <section id="contact">
+            <div class="container">
+              <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                  <input type="text" name="Name" placeholder="Your Name" required />
+                  <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                  <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="submit-result" class="message"></span>
+                <div id="loading" class="loading">
+                  <img src="images/lading.gif" alt="Loading..." />
+                </div>
+              </div>
             </div>
-          </div>
-        </section>        
-
+          </section>
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -285,7 +290,7 @@ document.querySelector('footer').addEventListener('mouseleave', function() {
     </script>
 
     <script>
-       function toggleMenu() {
+    function toggleMenu() {
   const menu = document.getElementById("sidemenu");
   const icon = document.querySelector(".menu-icon");
   menu.classList.toggle("show");
@@ -309,27 +314,40 @@ document.addEventListener('click', function(event) {
 header.addEventListener('click', function(event) {
   event.stopPropagation();
 });
+
+
     </script>
 
     <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbxXTIXPvE_Hqejz221aRQPI1aZwpNYx6caWLHHpWrUL51p0StaxAHNIPBnx8dsn7c5D/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
+ const scriptURL = "https://script.google.com/macros/s/AKfycbxXTIXPvE_Hqejz221aRQPI1aZwpNYx6caWLHHpWrUL51p0StaxAHNIPBnx8dsn7c5D/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    const msg = document.getElementById("submit-result");
+    const loading = document.getElementById("loading");
 
-      form
-        .addEventListener("submit", (e) => {
-          e.preventDefault();
-          fetch(scriptURL, { method: "POST", body: new FormData(form) }).then(
-            (response) => console.log("Success!", response)
-          );
-          msg.innerHTML = "Message sent successfully";
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      loading.classList.add("show"); // Tampilkan loading indicator
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          console.log("Success!", response);
+          loading.classList.remove("show"); // Sembunyikan loading indicator
+          msg.innerHTML = "Pesan Diterima Broo!! tq😁";
+          msg.classList.add("show");
           setTimeout(function () {
-            msg.innerHTML = "";
+            msg.classList.remove("show");
           }, 5000);
           form.reset();
         })
-        .catch((error) => console.error("Error!", error.message));
+        .catch((error) => {
+          console.error("Error!", error.message);
+          loading.classList.remove("show"); // Sembunyikan loading indicator
+          msg.innerHTML = "Failed to send message. Please try again later.";
+          msg.classList.add("show");
+          setTimeout(function () {
+            msg.classList.remove("show");
+          }, 5000);
+        });
+    });
     </script>
   </body>
 </html>
